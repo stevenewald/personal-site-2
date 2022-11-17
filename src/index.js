@@ -1,17 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Header from './header.js';
+import ImSteve from './ImSteve.js';
+import Intro from './intro.js';
+import ContactMe from './ContactMe.js';
+import Portfolio from './portfolio.js';
+import './output.css';
+class Landing extends React.Component {
+  constructor() {
+    super();
+    this.state = {activeNav:0};
+    this.handler = this.handler.bind(this);
+  }
+  handler(val) {
+    this.setState({
+      activeNav: val
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <Header nav={this.state.activeNav}/>
+        <ImSteve handler={this.handler}/>
+        <Portfolio handler={this.handler}/>
+        <ContactMe handler={this.handler}/>
+      </div>
+    )
+  }
+  
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Landing />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
