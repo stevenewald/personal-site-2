@@ -71,49 +71,49 @@ class ContactMe extends React.Component {
     }
     render() {
         return(
-            <section class="min-h-screen bg-white flex" id="contactTarg">
-                <div class="flex flex-col justify-center w-full p-8 px-40 w-1/2">
-                    <h1 class="font-semibold text-gray-800 capitalize text-5xl">contact me.</h1>
+            <section class="contact-container" id="contactTarg">
+                <div class="contact-text-cont">
+                    <h1 id="contact-text">contact me.</h1>
 
-                    <p class="mt-4 text-gray-500">
+                    <p id="contact-subtext">
                         Send me an email or fill out this form
                     </p>
                 </div>
 
-                <div class="flex flex-col justify-center p-8 pt-0 w-1/2 px-24 ">
+                <div class="contact-form-container">
                     <form>
-                        <div class="-mx-2 md:items-center md:flex">
-                            <div class="flex-1 px-2">
-                                <label class="block mb-2 text-sm text-gray-600">Full Name</label>
-                                <input type="text" placeholder="Your Name" id="name-input" onChange={this.validateInputs} class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div class="contact-input-cont">
+                            <div class="contact-halftext">
+                                <label class="text-inputbox">Full Name</label>
+                                <input type="text" placeholder="Your Name" id="name-input" onChange={this.validateInputs} class="text-input" />
                             </div>
 
-                            <div class="flex-1 px-2">
-                                <label class="block mb-2 text-sm text-gray-600">Phone Number</label>
-                                <input type="text" placeholder="123-456-7890" id="phone-input" onChange={this.validateInputs} class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <div class="contact-halftext">
+                                <label class="text-inputbox">Phone Number</label>
+                                <input type="text" placeholder="123-456-7890" id="phone-input" onChange={this.validateInputs} class="text-input" />
                             </div>
 
                         </div>
 
-                        <div class="-mx-2 md:items-center md:flex">
-                            <div class="flex-1 px-2 w-full mt-4 w-1/2">
-                                    <label class="block mb-2 text-sm text-gray-600">Email address</label>
-                                    <input type="email" id="email-input" placeholder="yourname@u.northwestern.edu" onChange={this.validateInputs} class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div class="contact-input-cont">
+                            <div class="contact-halftext contact-fulltext">
+                                    <label class="text-inputbox">Email address</label>
+                                    <input type="email" id="email-input" placeholder="yourname@u.northwestern.edu" onChange={this.validateInputs} class="text-input" />
                                 </div>
 
-                            <div class="flex-1 px-2 w-full mt-4 w-1/2 no-select-text">
-                                <label class="block mb-2 text-sm text-gray-600">Requested response date</label>
+                            <div class="contact-halftext contact-fulltext no-select-text">
+                                <label class="text-inputbox">Requested response date</label>
                                 <input type="date" id="datePicker"
                                     min="2022-01-01" max="2024-12-31"></input>
                             </div>
                         </div>
 
-                        <div class="w-full mt-4">
-                            <label class="block mb-2 text-sm text-gray-600" id="messagelabel">Message</label>
-                            <textarea id="message-input" onChange={this.validateInputs} class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-56 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Message"></textarea>
+                        <div class="message-box-cont">
+                            <label class="text-inputbox" id="messagelabel">Message</label>
+                            <textarea id="message-input" onChange={this.validateInputs} class="text-input" placeholder="Message"></textarea>
                         </div>
 
-                        <button id="sendbutt" class="bg-blue-500 w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                        <button id="sendbutt" class="send-button">
                             send me a message
                         </button>
                     </form>

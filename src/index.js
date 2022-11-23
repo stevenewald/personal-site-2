@@ -2,11 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Header from './header.js';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
 import ImSteve from './ImSteve.js';
 import Intro from './intro.js';
 import ContactMe from './ContactMe.js';
 import Portfolio from './portfolio.js';
 import './output.css';
+
+
+class HomePage extends React.Component {
+  render() {
+    return (
+      <div>
+          <ImSteve handler={this.props.handler}/>
+          <Portfolio handler={this.props.handler}/>
+          <ContactMe handler={this.props.handler}/>
+        </div>
+    )
+  }
+}
+
+
 class Landing extends React.Component {
   constructor() {
     super();
@@ -21,12 +38,13 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div>
+      <Router>
         <Header nav={this.state.activeNav}/>
-        <ImSteve handler={this.handler}/>
-        <Portfolio handler={this.handler}/>
-        <ContactMe handler={this.handler}/>
-      </div>
+        <Routes>
+          <Route exact path='/' exact element={<HomePage handler={this.handler}/>} />
+          <Route path='/plane' element={<HomePage handler={this.handler}/>} />
+        </Routes>
+      </Router>
     )
   }
   

@@ -1,11 +1,63 @@
 import React from 'react';
 import './index.css';
 import './output.css';
+import Plane from './plane.js';
 
 class Portfolio extends React.Component {
+    constructor() {
+        super();
+        this.toggleOpen = this.toggleOpen.bind(this);
+        this.c1A = React.createRef(); //card 1 absolute container
+        this.c1C = React.createRef(); //card 1 card object
+
+        this.plane_text = "I modified a kit-built model plane to hold a raspberry pi+navio2 sensor board, allowing me to program an autonomous flight routine from scratch."
+    }
+
+    toggleOpen(obj, abs, openOrClose) {
+        if(openOrClose==="close") {
+            setTimeout(() => {
+                obj.current.classList.remove('duration-300');
+                obj.current.classList.remove('ease-out');
+                obj.current.classList.add('duration-150');
+                obj.current.classList.add('ease-in');
+            }, 1);
+            setTimeout(() => {
+                obj.current.classList.remove('-translate-y-96');
+                obj.current.classList.remove('opacity-100');
+                obj.current.classList.remove('scale-150');
+                obj.current.classList.add('translate-y-20');
+                obj.current.classList.add('opacity-0');
+                obj.current.classList.add('scale-95');
+            }, 3);
+            setTimeout(() => {
+                abs.current.classList.add('hidden');
+            }, 300);
+        } else if(openOrClose==="open") {
+            setTimeout(() => {
+                abs.current.classList.remove('hidden');
+                obj.current.classList.add("transition");
+                obj.current.classList.add("duration-300");
+                obj.current.classList.add("ease-out");
+            }, 1);
+            setTimeout(() => {
+                obj.current.classList.add('translate-y-20');
+                obj.current.classList.add('scale-95');
+                obj.current.classList.add('opacity-0')
+            }, 2);
+            setTimeout(() => {
+                obj.current.classList.remove('scale-95');
+                obj.current.classList.remove('opacity-0');
+                obj.current.classList.remove('translate-y-20');
+                obj.current.classList.add('-translate-y-96');
+                obj.current.classList.add('opacity-100');
+                obj.current.classList.add('scale-150')
+            }, 3);
+        }
+    }
     render() {
         return (
             <section class="gray-bg" id="portTarg">
+                <div><Plane cardHandler={this.toggleOpen} header_text={"Autonomous Model Plane Project"} subtext={this.plane_text} abs_cont={this.c1A} card_cont={this.c1C}/></div>
                 <div class="portfolio-cont">
                     <h1 id="port-head-text">Personal Projects</h1>
 
@@ -15,7 +67,7 @@ class Portfolio extends React.Component {
 
 
                     <div class="three-img-cont">
-                        <a href="https://github.com/stevenewald/SolarPlane"><div id="port-img-1" class="portfolio-img">
+                        <a onClick={() => this.toggleOpen(this.c1C, this.c1A, "open")}><div id="port-img-1" class="portfolio-img">
                             <div
                                 class="portfolio-blur">
                                 <h2 class="port-tagline">Autonomous model plane</h2>
