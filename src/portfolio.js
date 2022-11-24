@@ -1,63 +1,27 @@
 import React from 'react';
 import './index.css';
 import './output.css';
-import Plane from './plane.js';
+import Project from './project.js';
 
 class Portfolio extends React.Component {
     constructor() {
         super();
-        this.toggleOpen = this.toggleOpen.bind(this);
-        this.c1A = React.createRef(); //card 1 absolute container
-        this.c1C = React.createRef(); //card 1 card object
+        this.project_1 = React.createRef();
+        this.project_2 = React.createRef();
+        this.project_3 = React.createRef();
 
-        this.plane_text = "I modified a kit-built model plane to hold a raspberry pi+navio2 sensor board, allowing me to program an autonomous flight routine from scratch."
+        this.plane_text = "I modified a kit-built RC plane to hold a Raspberry Pi and Navio2 sensor board. This enabled me to program an autonomous flight routine from scratch. The resulting plane was able to take-off, fly through waypoints, and land, all on its own."
+        this.frat_text = "Kappa Theta Pi is a co-ed tech fraternity focused on pre-professional technological development. I serve on the board of executives as VP of Technology, and created the website (viewable at ktpnu.com)."
+        this.radix_text = "I created a python library to support efficient grid-based word pathfinding utilizing a radix trie data structure. This allows users to find words in a grid in O(mn) time."
     }
 
-    toggleOpen(obj, abs, openOrClose) {
-        if(openOrClose==="close") {
-            setTimeout(() => {
-                obj.current.classList.remove('duration-300');
-                obj.current.classList.remove('ease-out');
-                obj.current.classList.add('duration-150');
-                obj.current.classList.add('ease-in');
-            }, 1);
-            setTimeout(() => {
-                obj.current.classList.remove('-translate-y-96');
-                obj.current.classList.remove('opacity-100');
-                obj.current.classList.remove('scale-150');
-                obj.current.classList.add('translate-y-20');
-                obj.current.classList.add('opacity-0');
-                obj.current.classList.add('scale-95');
-            }, 3);
-            setTimeout(() => {
-                abs.current.classList.add('hidden');
-            }, 300);
-        } else if(openOrClose==="open") {
-            setTimeout(() => {
-                abs.current.classList.remove('hidden');
-                obj.current.classList.add("transition");
-                obj.current.classList.add("duration-300");
-                obj.current.classList.add("ease-out");
-            }, 1);
-            setTimeout(() => {
-                obj.current.classList.add('translate-y-20');
-                obj.current.classList.add('scale-95');
-                obj.current.classList.add('opacity-0')
-            }, 2);
-            setTimeout(() => {
-                obj.current.classList.remove('scale-95');
-                obj.current.classList.remove('opacity-0');
-                obj.current.classList.remove('translate-y-20');
-                obj.current.classList.add('-translate-y-96');
-                obj.current.classList.add('opacity-100');
-                obj.current.classList.add('scale-150')
-            }, 3);
-        }
-    }
     render() {
         return (
             <section class="gray-bg" id="portTarg">
-                <div><Plane cardHandler={this.toggleOpen} header_text={"Autonomous Model Plane Project"} subtext={this.plane_text} abs_cont={this.c1A} card_cont={this.c1C}/></div>
+                <div><Project ref={this.project_1} header_text={"Autonomous Model Plane Project"} image_src="https://i.ibb.co/h8jPcY2/secondary-plane.jpg" subtext={this.plane_text}/></div>
+                <div><Project ref={this.project_2} header_text={"Co-ed Tech Fraternity Website"} image_src="https://i.ibb.co/pPWym5V/Screenshot-2022-11-13-at-1-11-34-PM.png" subtext={this.frat_text}/></div>
+                <div><Project ref={this.project_3} header_text={"Radix Trie Pathfinding Library"} image_src="https://camo.githubusercontent.com/f3e5e22a2a27818b4c9ef732d152ccc392fb039a0508e4ddeedb78d3219ced27/68747470733a2f2f6d65646961332e67697068792e636f6d2f6d656469612f4b6b62743864704a76486b573442473533642f67697068792e6769663f6369643d373930623736313139303736383431616636626162303733383031396661336639653433363831306434386132636537267269643d67697068792e6769662663743d67" subtext={this.radix_text}/></div>
+                
                 <div class="portfolio-cont">
                     <h1 id="port-head-text">Personal Projects</h1>
 
@@ -67,7 +31,7 @@ class Portfolio extends React.Component {
 
 
                     <div class="three-img-cont">
-                        <a onClick={() => this.toggleOpen(this.c1C, this.c1A, "open")}><div id="port-img-1" class="portfolio-img">
+                        <a onClick={() => this.project_1.current.toggleOpen("open")}><div id="port-img-1" class="portfolio-img">
                             <div
                                 class="portfolio-blur">
                                 <h2 class="port-tagline">Autonomous model plane</h2>
@@ -76,7 +40,7 @@ class Portfolio extends React.Component {
                         </div></a>
 
 
-                        <a href="https://ktpnu.com"><div id="port-img-3" class="portfolio-img">
+                        <a onClick={() => this.project_2.current.toggleOpen("open")}><div id="port-img-3" class="portfolio-img">
                             <div
                                 class="portfolio-blur">
                                 <h2 class="port-tagline">Tech fraternity website</h2>
@@ -84,7 +48,7 @@ class Portfolio extends React.Component {
                             </div>
                         </div></a>
 
-                        <a href="https://github.com/stevenewald/radix-pathfinding"><div id="port-img-2" class="portfolio-img">
+                        <a onClick={() => this.project_3.current.toggleOpen("open")}><div id="port-img-2" class="portfolio-img">
                             <div
                                 class="portfolio-blur">
                                 <h2 class="port-tagline">Grid-based radix-trie-optimized pathfinding library</h2>
