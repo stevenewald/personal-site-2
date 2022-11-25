@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './assets/index_2.css';
 import Header from './header.js';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
@@ -10,7 +11,6 @@ import Portfolio from './portfolio.js';
 import Footer from './footer.js';
 import AboutMe from './AboutMe.js';
 import Integration from './Integration.js';
-import './output.css';
 
 
 class HomePage extends React.Component {
