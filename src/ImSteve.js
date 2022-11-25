@@ -5,6 +5,7 @@ class ImSteve extends React.Component {
         return (
             <div class="splash-cont" id="homeTarg">
                 <div class="imsteve-text-cont">
+                <div class="no-size" id="pers-inf-cont"></div>
                     <div class="imsteve-text">
                         <div class="blue-icon-cont">
                             <div class="blue-icon-smaller">
@@ -19,10 +20,12 @@ class ImSteve extends React.Component {
                         </h1>
 
                         <h3 id="swe-text" class="head-text">
-                            Software engineer and sophomore studying at Northwestern University
+                            Software engineer and sophomore studying at Northwestern University.
                         </h3>
 
-                        <div id="pers-inf-cont">
+                        
+
+                        <div>
                             <p class="icon-text-cont">
                                 <svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" clip-rule="evenodd"><path d="M22 9.74l-2 1.02v7.24c-1.007 2.041-5.606 3-8.5 3-3.175 0-7.389-.994-8.5-3v-7.796l-3-1.896 12-5.308 11 6.231v8.769l1 3h-3l1-3v-8.26zm-18 1.095v6.873c.958 1.28 4.217 2.292 7.5 2.292 2.894 0 6.589-.959 7.5-2.269v-6.462l-7.923 4.039-7.077-4.473zm-1.881-2.371l9.011 5.694 9.759-4.974-8.944-5.066-9.826 4.346z"/></svg>
 
@@ -51,12 +54,12 @@ class ImSteve extends React.Component {
                                 <button class="blue-button">
                                     <svg class="bb-icon" xmlns="http://www.w3.org/2000/svg" stroke="none" fill="white" viewBox="0 0 24 24"><path d="M11.362 2c4.156 0 2.638 6 2.638 6s6-1.65 6 2.457v11.543h-16v-20h7.362zm.827-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm4.811 13h-10v-1h10v1zm0 2h-10v1h10v-1zm-3 3h-7v1h7v-1z"/></svg>
 
-                                    <a href="https://steve.ee/StevenEwaldResume.pdf"><span class="bb-link">Download CV</span></a>
+                                    <a href="https://steve.ee/StevenEwaldResume.pdf" onClick={() => alert("Resume is a bit outdated (click close for redirect)")}><span class="bb-link">Download CV</span></a>
                                 </button>
                                 <button id="bb2" class="blue-button">
-                                    <svg class="bb-icon" xmlns="http://www.w3.org/2000/svg" stroke="none" fill="white" viewBox="0 0 24 24"><path d="M11.362 2c4.156 0 2.638 6 2.638 6s6-1.65 6 2.457v11.543h-16v-20h7.362zm.827-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm4.811 13h-10v-1h10v1zm0 2h-10v1h10v-1zm-3 3h-7v1h7v-1z"/></svg>
+                                    <svg class="bb-icon" xmlns="http://www.w3.org/2000/svg" stroke="none" fill="white" viewBox="0 0 24 24"><path d="M12.042 23.648c-7.813 0-12.042-4.876-12.042-11.171 0-6.727 4.762-12.125 13.276-12.125 6.214 0 10.724 4.038 10.724 9.601 0 8.712-10.33 11.012-9.812 6.042-.71 1.108-1.854 2.354-4.053 2.354-2.516 0-4.08-1.842-4.08-4.807 0-4.444 2.921-8.199 6.379-8.199 1.659 0 2.8.876 3.277 2.221l.464-1.632h2.338c-.244.832-2.321 8.527-2.321 8.527-.648 2.666 1.35 2.713 3.122 1.297 3.329-2.58 3.501-9.327-.998-12.141-4.821-2.891-15.795-1.102-15.795 8.693 0 5.611 3.95 9.381 9.829 9.381 3.436 0 5.542-.93 7.295-1.948l1.177 1.698c-1.711.966-4.461 2.209-8.78 2.209zm-2.344-14.305c-.715 1.34-1.177 3.076-1.177 4.424 0 3.61 3.522 3.633 5.252.239.712-1.394 1.171-3.171 1.171-4.529 0-2.917-3.495-3.434-5.246-.134z"/></svg>
 
-                                    <a href=""><span class="bb-link">Contact me</span></a>
+                                    <a href="mailto:steve@steve.ee"><span class="bb-link">Contact me</span></a>
                                 </button>
                             </div>                                
                         </div>

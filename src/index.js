@@ -5,9 +5,10 @@ import Header from './header.js';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import ImSteve from './ImSteve.js';
-import Intro from './intro.js';
 import ContactMe from './ContactMe.js';
 import Portfolio from './portfolio.js';
+import Footer from './footer.js';
+import AboutMe from './AboutMe.js';
 import './output.css';
 
 
@@ -16,8 +17,10 @@ class HomePage extends React.Component {
     return (
       <div>
           <ImSteve handler={this.props.handler}/>
+          <AboutMe handler={this.props.handler}/>
           <Portfolio handler={this.props.handler}/>
           <ContactMe handler={this.props.handler}/>
+          <Footer />
         </div>
     )
   }

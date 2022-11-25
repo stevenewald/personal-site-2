@@ -76,7 +76,7 @@ class ContactMe extends React.Component {
                     <h1 id="contact-text">contact me.</h1>
 
                     <p id="contact-subtext">
-                        Send me an email or fill out this form
+                        Send me an email or fill out the form.
                     </p>
                 </div>
 
@@ -126,7 +126,7 @@ class ContactMe extends React.Component {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
-                this.props.handler(2);
+                this.props.handler(3);
               }
             });
           });

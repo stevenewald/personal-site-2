@@ -69,7 +69,7 @@ class Portfolio extends React.Component {
                 document.getElementById("port-img-1").classList.add('active');
                 document.getElementById("port-img-2").classList.add('active');
                 document.getElementById("port-img-3").classList.add('active');
-                this.props.handler(1);
+                this.props.handler(2);
               }
             });
           });
