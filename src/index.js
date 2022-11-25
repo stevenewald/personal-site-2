@@ -9,6 +9,7 @@ import ContactMe from './ContactMe.js';
 import Portfolio from './portfolio.js';
 import Footer from './footer.js';
 import AboutMe from './AboutMe.js';
+import Integration from './Integration.js';
 import './output.css';
 
 
@@ -19,6 +20,7 @@ class HomePage extends React.Component {
           <ImSteve handler={this.props.handler}/>
           <AboutMe handler={this.props.handler}/>
           <Portfolio handler={this.props.handler}/>
+          <Integration />
           <ContactMe handler={this.props.handler}/>
           <Footer />
         </div>
