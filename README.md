@@ -1,4 +1,4 @@
-I receieved permission via piazza to use react. I didn't use any other frameworks or packages for the site.
+I receieved permission via piazza to use react.
 
 # Extra credit
 ## Justification for YouTube videos:
