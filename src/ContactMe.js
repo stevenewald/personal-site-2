@@ -84,36 +84,36 @@ class ContactMe extends React.Component {
                     <form>
                         <div class="contact-input-cont">
                             <div class="contact-halftext">
-                                <label class="text-inputbox">Full Name</label>
-                                <input type="text" placeholder="Your Name" id="name-input" onChange={this.validateInputs} class="text-input" />
+                                <label class="text-inputbox" for="name-input">Full Name</label>
+                                <input type="text" placeholder="Your Name" id="name-input" name="name-input" onChange={this.validateInputs} class="text-input" />
                             </div>
 
                             <div class="contact-halftext">
-                                <label class="text-inputbox">Phone Number</label>
-                                <input type="text" placeholder="123-456-7890" id="phone-input" onChange={this.validateInputs} class="text-input" />
+                                <label class="text-inputbox" for="phone-input">Phone Number</label>
+                                <input type="text" placeholder="123-456-7890" id="phone-input" name="phone-input" onChange={this.validateInputs} class="text-input" />
                             </div>
 
                         </div>
 
                         <div class="contact-input-cont">
                             <div class="contact-halftext contact-fulltext">
-                                    <label class="text-inputbox">Email address</label>
-                                    <input type="email" id="email-input" placeholder="yourname@u.northwestern.edu" onChange={this.validateInputs} class="text-input" />
+                                    <label class="text-inputbox" for="email-input">Email address</label>
+                                    <input type="email" id="email-input" name="email-input" placeholder="yourname@u.northwestern.edu" onChange={this.validateInputs} class="text-input" />
                                 </div>
 
                             <div class="contact-halftext contact-fulltext no-select-text">
-                                <label class="text-inputbox">Requested response date</label>
-                                <input type="date" id="datePicker"
+                                <label class="text-inputbox" for="date-input">Requested response date</label>
+                                <input type="date" id="datePicker" name="date-input"
                                     min="2022-01-01" max="2024-12-31"></input>
                             </div>
                         </div>
 
                         <div class="message-box-cont">
-                            <label class="text-inputbox" id="messagelabel">Message</label>
-                            <textarea id="message-input" onChange={this.validateInputs} class="text-input" placeholder="Message"></textarea>
+                            <label class="text-inputbox" id="messagelabel" for="message-input">Message</label>
+                            <textarea id="message-input" name="message-input" onChange={this.validateInputs} class="text-input" placeholder="Message"></textarea>
                         </div>
 
-                        <button id="sendbutt" class="send-button">
+                        <button type="button" id="sendbutt" class="send-button">
                             send me a message
                         </button>
                     </form>
@@ -126,7 +126,7 @@ class ContactMe extends React.Component {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
-                this.props.handler(3);
+                this.props.handler(4);
               }
             });
           });

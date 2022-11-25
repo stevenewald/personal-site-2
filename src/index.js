@@ -19,8 +19,8 @@ class HomePage extends React.Component {
       <div>
           <ImSteve handler={this.props.handler}/>
           <AboutMe handler={this.props.handler}/>
+          <Integration handler={this.props.handler}/>
           <Portfolio handler={this.props.handler}/>
-          <Integration />
           <ContactMe handler={this.props.handler}/>
           <Footer />
         </div>

@@ -18,9 +18,9 @@ class Portfolio extends React.Component {
     render() {
         return (
             <section class="gray-bg" id="portTarg">
-                <div><Project ref={this.project_1} header_text={"Autonomous Model Plane Project"} image_src="https://i.ibb.co/h8jPcY2/secondary-plane.jpg" subtext={this.plane_text}/></div>
-                <div><Project ref={this.project_2} header_text={"Co-ed Tech Fraternity Website"} image_src="https://i.ibb.co/pPWym5V/Screenshot-2022-11-13-at-1-11-34-PM.png" subtext={this.frat_text}/></div>
-                <div><Project ref={this.project_3} header_text={"Radix Trie Pathfinding Library"} image_src="https://camo.githubusercontent.com/f3e5e22a2a27818b4c9ef732d152ccc392fb039a0508e4ddeedb78d3219ced27/68747470733a2f2f6d65646961332e67697068792e636f6d2f6d656469612f4b6b62743864704a76486b573442473533642f67697068792e6769663f6369643d373930623736313139303736383431616636626162303733383031396661336639653433363831306434386132636537267269643d67697068792e6769662663743d67" subtext={this.radix_text}/></div>
+                <div><Project ref={this.project_1} aura-hidden='true' header_text={"Autonomous Model Plane Project"} alt="Picture of RC Plane being set up" image_src="https://i.ibb.co/h8jPcY2/secondary-plane.jpg" subtext={this.plane_text}/></div>
+                <div><Project ref={this.project_2} aura-hidden='true' header_text={"Co-ed Tech Fraternity Website"} alt="Screenshot of Kappa Theta Pi website" image_src="https://i.ibb.co/pPWym5V/Screenshot-2022-11-13-at-1-11-34-PM.png" subtext={this.frat_text}/></div>
+                <div><Project ref={this.project_3} aura-hidden='true' header_text={"Radix Trie Pathfinding Library"} alt="GIF of algorithm performing word pathfinding" image_src="https://camo.githubusercontent.com/f3e5e22a2a27818b4c9ef732d152ccc392fb039a0508e4ddeedb78d3219ced27/68747470733a2f2f6d65646961332e67697068792e636f6d2f6d656469612f4b6b62743864704a76486b573442473533642f67697068792e6769663f6369643d373930623736313139303736383431616636626162303733383031396661336639653433363831306434386132636537267269643d67697068792e6769662663743d67" subtext={this.radix_text}/></div>
                 
                 <div class="portfolio-cont">
                     <h1 id="port-head-text">Personal Projects</h1>
@@ -31,7 +31,7 @@ class Portfolio extends React.Component {
 
 
                     <div class="three-img-cont">
-                        <a onClick={() => this.project_1.current.toggleOpen("open")}><div id="port-img-1" class="portfolio-img">
+                        <a onClick={() => this.project_1.current.toggleOpen("open")}><div id="port-img-1" class="portfolio-img" alt="GIF of RC Plane taking off">
                             <div
                                 class="portfolio-blur">
                                 <h2 class="port-tagline">Autonomous model plane</h2>
@@ -40,7 +40,7 @@ class Portfolio extends React.Component {
                         </div></a>
 
 
-                        <a onClick={() => this.project_2.current.toggleOpen("open")}><div id="port-img-3" class="portfolio-img">
+                        <a onClick={() => this.project_2.current.toggleOpen("open")}><div id="port-img-3" class="portfolio-img" alt="Screenshot of Kappa Theta Pi website">
                             <div
                                 class="portfolio-blur">
                                 <h2 class="port-tagline">Tech fraternity website</h2>
@@ -48,7 +48,7 @@ class Portfolio extends React.Component {
                             </div>
                         </div></a>
 
-                        <a onClick={() => this.project_3.current.toggleOpen("open")}><div id="port-img-2" class="portfolio-img">
+                        <a onClick={() => this.project_3.current.toggleOpen("open")}><div id="port-img-2" class="portfolio-img" alt="GIF of algorithm performing word pathfinding">
                             <div
                                 class="portfolio-blur">
                                 <h2 class="port-tagline">Grid-based radix-trie-optimized pathfinding library</h2>

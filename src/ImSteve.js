@@ -68,7 +68,7 @@ class ImSteve extends React.Component {
 
                 <div class="picture-cont">
                     <div class="picture-cont-cont">
-                        <img id="stevepic" src="https://steve.ee/assets/images/Steve_1.JPG"></img>
+                        <img id="stevepic" src="https://steve.ee/assets/images/Steve_1.JPG" alt="Casual picture of Steve standing in front of Zion National Park"></img>
                     </div>
                 </div>
             </div>
