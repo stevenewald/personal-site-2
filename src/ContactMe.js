@@ -113,7 +113,7 @@ class ContactMe extends React.Component {
                             <textarea id="message-input" name="message-input" onChange={this.validateInputs} class="text-input" placeholder="Message"></textarea>
                         </div>
 
-                        <button type="button" id="sendbutt" class="send-button">
+                        <button id="sendbutt" class="send-button">
                             send me a message
                         </button>
                     </form>
